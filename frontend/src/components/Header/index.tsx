@@ -30,7 +30,7 @@ const Header = () => {
         <div className="container">
             <div className="nav__wrapper">
                 <div className="logo">
-                    <h2>Thigency</h2>
+                    <h2>Thiagency</h2>
                     {/* <p>Cresça com nós</p> */}
                 </div>
 
@@ -39,7 +39,7 @@ const Header = () => {
                     <ul className="menu">
                         {
                             nav__links.map((item, index) => (
-                                <li className="menu__item">
+                                <li className="menu__item" key={index}>
                                     <a href={item.path} className="menu__link">
                                         {item.display}
                                     </a>
