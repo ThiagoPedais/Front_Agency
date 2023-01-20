@@ -37,6 +37,12 @@
     align-items: center;    
     column-gap: 0.4rem;
     font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.light-theme .light__mode span {
+    color: #000;
+    font-weight: 500;
 }
 
 .header__shrink {
@@ -47,4 +53,5 @@
     top: 0;
     left: 0;
     z-index: 9999;
+    background: #0c123d;
 }
