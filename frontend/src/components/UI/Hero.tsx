@@ -9,7 +9,7 @@ type Props = {
 
 export const Hero = ({ theme }: Props) => {
     return (
-        <section className="hero__section">
+        <section className="hero__section" id="home">
             <div className="container">
                 <div className="hero__wrapper">
 

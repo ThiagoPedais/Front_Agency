@@ -40,7 +40,7 @@
     color: #fff;
 }
 
-.service__icon i{
+.service__icon i {
     font-size: 1.5rem;
     color: var(--primary-color);
 }
@@ -49,4 +49,42 @@
     color: var(--primary-color);
     font-size: 1.3rem;
     margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 992px) {
+    .services__top-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .service__item-wrapper {
+        /* padding: 15px; */
+        flex-wrap: wrap;
+    }
+
+    .services__item {
+        width: 31%;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 961px) {
+    .services__item {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .services__item {
+        width: 47%;
+    }
+
+    .service__title {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .services__item {
+        width: 100%;
+    }
 }

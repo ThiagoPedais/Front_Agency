@@ -58,3 +58,20 @@
     display: flex;
     column-gap: 1.5rem;
 }
+
+@media only screen and (max-width:768px) {
+    .team__item {
+        width: 30%;
+        margin-bottom: 30px;
+    }
+
+    .team__wrapper {
+        flex-wrap: wrap;
+    }    
+}
+
+@media only screen and (max-width: 576px) {
+    .team__item {
+        width: 47%;
+    }
+}

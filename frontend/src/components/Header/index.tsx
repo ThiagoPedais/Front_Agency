@@ -30,9 +30,13 @@ type Props = {
     toggleTheme: () => void
 }
 
+
+
+
 const Header = ({ theme, toggleTheme }: Props) => {
 
     const headerRef = useRef(document.createElement("className"))
+    const menuRef = useRef<HTMLDivElement>(null)
 
     const headerFunc = () => {
         if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
@@ -64,8 +68,15 @@ const Header = ({ theme, toggleTheme }: Props) => {
         });
     }
 
+    const toggleMenu = () => {
+        if (menuRef.current) {
+          menuRef.current.classList.toggle('menu__active')
+        }
+      }
+    // const toggleMenu = () => menuRef.current.classList.toggle('menu__active')
+
     return (
-        <header className="header" ref={headerRef} id="#home">
+        <header className="header" ref={headerRef} >
             <div className="container">
                 <div className="nav__wrapper">
                     <div className="logo">
@@ -74,7 +85,7 @@ const Header = ({ theme, toggleTheme }: Props) => {
                     </div>
 
                     {/* ================= navigation ========================= */}
-                    <div className="navigation">
+                    <div className="navigation" ref={menuRef} onClick={toggleMenu}>
                         <ul className="menu">
                             {
                                 nav__links.map((item, index) => (
@@ -102,6 +113,10 @@ const Header = ({ theme, toggleTheme }: Props) => {
 
                         </span>
                     </div>
+
+                    <span className="mobile__menu" onClick={toggleMenu}>
+                        <i className='ri-menu-line'></i>
+                    </span>
 
                 </div>
             </div>

@@ -37,7 +37,8 @@
     column-gap: 1.5rem;
 }
 
-.primary__btn, .secondary__btn {
+.primary__btn,
+.secondary__btn {
     padding: 0.8rem 1.5rem;
     border: none;
     outline: none;
@@ -53,4 +54,52 @@
 
 .secondary__btn {
     background-color: var(--btn-primary-bg);
+}
+
+@media only screen and (max-width:992px) {
+    .hero__content {
+        font-size: 2rem;
+        line-height: 50px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .hero__content h2 {
+        font-size: 1.2rem;
+        line-height: 45px;
+    }
+
+    .hero__content p {
+        font-size: 0.9rem;
+    }
+
+    .hero__content,
+    .hero__img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:740px) {
+    .hero__content h2 {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 45px;
+    }
+
+    .hero__content p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .hero__btns {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero__wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
